@@ -58,6 +58,22 @@ router.post("/music", (req, res, next) => {
 
 
 
+//CHOSEN ALBUM
+
+router.get("/music/:id", (req, res, next) => {
+  const { id } = req.params
+
+  deezerApi.getAlbumTracks(id)
+  /* .then(album => console.log(album)) */
+  .then(album => {
+    console.log(album.data.tracks.data)
+    res.render("discover/chosen-album", album.data )
+  })
+  .catch(err => console.log(err))
+}
+)
+
+
 
 
 module.exports = router;
