@@ -71,6 +71,7 @@ router.post("/login", (req, res) => {
 
       //5. Enganchar el objeto de usuario al req.session
       req.session.currentUser = user
+      req.app.locals.currentUser = user
       res.redirect("/dashboard")
     })
     .catch(err => console.log(err))
@@ -84,6 +85,7 @@ router.post("/login", (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.session.destroy(() => res.redirect('/'))
+  req.app.locals.currentUser = undefined
 })
 
 

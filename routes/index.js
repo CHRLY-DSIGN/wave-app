@@ -7,5 +7,6 @@ module.exports = app => {
   app.use('/profile', require('./profile.routes.js'))
   app.use('/radio', require('./radio.routes.js'))
   app.use('/', require('./auth.routes.js'))
+  app.use('/playlist', require('./playlist.routes.js'))
   
 }
