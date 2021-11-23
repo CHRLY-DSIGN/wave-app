@@ -1,9 +1,19 @@
 <h3>Discover music</h3>
 
 <form action="/discover/music" method="POST">
-<div>
-    <label for="artist">Search by artist</label>
-    <input type="text" name="artist" id="username">
-</div>
+    <div>
+        <label for="artist">Search by artist</label>
+        <input type="text" name="artist" id="username">
+    </div>
+
+
+    <button type="submit">Search</button>
 
 </form>
+
+{{#each artists}}
+<div>
+
+    <h4>{{artist.name}}</h4>
+</div>
+{{/each}}
