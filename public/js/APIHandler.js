@@ -13,6 +13,7 @@ class APIHandler {
     searchByTrack = (track) => this.axiosApp.get(`/search/track?q=${track}`)
 
     getAlbumTracks = (id) => this.axiosApp.get(`/album/${id})`)
+    /* getAlbumTracks = (id) => this.axiosApp.get(`/album/${id})/tracks`) */
 }
 
 module.exports = ("APIHandler", APIHandler)

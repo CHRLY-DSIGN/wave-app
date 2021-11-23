@@ -66,7 +66,7 @@ router.get("/music/:id", (req, res, next) => {
   deezerApi.getAlbumTracks(id)
   /* .then(album => console.log(album)) */
   .then(album => {
-    console.log(album.data.tracks.data)
+    console.log(album)
     res.render("discover/chosen-album", album.data )
   })
   .catch(err => console.log(err))

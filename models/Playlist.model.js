@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const playlistSchema = new Schema({
   name: String,
   track: [String],
-  creator: { 
+  owner: { 
       type: Schema.Types.ObjectId,
       ref: "User"
   }

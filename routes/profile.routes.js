@@ -20,6 +20,11 @@ router.get("/:id", (req, res, next) => {
   
   //TODO create a middleware / util to show only this user's playlists
 
+  /* let playlistOwner = playlist.populate("owner")
+  if (playlistOwner === user) {
+
+  } */
+
   Promise.all([user, playlist])
     .then(data => {
       const [user, playlist] = data
