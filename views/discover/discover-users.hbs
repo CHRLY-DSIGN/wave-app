@@ -1,0 +1,19 @@
+<h3>Discover users</h3>
+
+
+{{!-- TODO search users by name --}}
+<form action="/discover/music" method="POST">
+<div>
+    <label for="user">Who are you looking for?</label>
+    <input type="text" name="user" id="user">
+</div>
+</form>
+
+{{#each allUsers}}
+    <div>
+        <p>{{username}}</p>
+        <a href="/profile/{{_id}}">Visit profile</a>
+        <button>Follow</button>
+        {{!-- TODO visit users profiles and maybe follow them --}}
+    </div>
+{{/each}}

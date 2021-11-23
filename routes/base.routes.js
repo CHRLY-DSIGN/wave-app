@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const { isLoggedIn, checkRoles } = require("../middlewares")
+const User = require("../models/User.model")
 
 //HOME
 router.get("/", (req, res, next) => {
@@ -7,8 +9,8 @@ router.get("/", (req, res, next) => {
 
 
 //DASHBOARD
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard/dashboard-main")
-})
+router.get("/dashboard", isLoggedIn, (req, res, next) => {
+  res.render("dashboard/dashboard-main", req.session.currentUser)
+});
 
 module.exports = router;

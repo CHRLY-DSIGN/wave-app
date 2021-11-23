@@ -18,6 +18,7 @@ app.use(express.static('public/images'));
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
+require("./config/session.config")(app);
 
 // default value for title local
 const projectName = "repaso-crud";
