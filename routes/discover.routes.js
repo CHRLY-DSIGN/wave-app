@@ -28,16 +28,33 @@ router.get("/users", (req, res, next) => {
 
 //SEARCH BY ARTIST
 router.post("/music", (req, res, next) => {
-  const {artist} = req.body
+  const {artist, track} = req.body
 
-  console.log(artist);
-  deezerApi.searchByArtist(artist)
+  console.log('req.body', req.body);
+  const searchArtist = deezerApi.searchByArtist(artist)
+  const searchTrack = deezerApi.searchByTrack(track)
   // .then(searchedArtist => console.log(searchedArtist.data.data[0] ))
-    .then(searchedArtist => res.render("discover/discover-music", {artists: searchedArtist?.data.data} ))
-    .catch(err => console.log(err))
+    // .then(searchedArtist => res.render("discover/discover-music", {artists: searchedArtist?.data.data} ))
+    // .catch(err => console.log(err))
+
+    Promise.all([searchArtist, searchTrack])
+      .then(data => {
+        const [searchArtist, searchTrack] = data
+        res.render("discover/discover-music", {searchArtist, searchTrack})
+      })
+      .catch(err => console.log(err))
 })
 
-//TODO fix the search by artist functionality
+
+
+//SEARCH BY TRACK
+router.post("/music", (req, res, next) => {
+  const {track} = req.body
+
+  deezerApi.searchByTrack(track)
+    .then(searchedTrack => res.render("discover/discover-music", {tracks: searchedTrack?.data} ))
+    .catch(err => console.log(err))
+})
 
 
 

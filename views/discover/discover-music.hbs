@@ -3,17 +3,44 @@
 <form action="/discover/music" method="POST">
     <div>
         <label for="artist">Search by artist</label>
-        <input type="text" name="artist" id="username">
+        <input type="text" name="artist" id="artist">
     </div>
 
+    <div>
+        <label for="track">Search by track</label>
+        <input type="text" name="track" id="track">
+    </div>
 
     <button type="submit">Search</button>
 
 </form>
 
-{{#each artists}}
-<div>
 
-    <h4>{{artist.name}}</h4>
+
+{{#each searchArtist.data.data}}
+<div>
+    <a href="#">
+
+    <img src="{{album.cover_big}}">
+    <h4>{{album.title}}</h4>
+    <p>{{artist.name}}</p>
+
+    </a>
+</div>
+{{/each}}
+
+
+
+
+{{#each searchTrack.data.data}}
+<div>
+    <a href="#">
+
+    <img src="{{artist.picture_big}}">
+    <h4>{{title_short}}</h4>
+    <p>{{artist.name}}</p>
+    <audio controls src="{{preview}}"></audio>
+
+    </a>
 </div>
 {{/each}}
