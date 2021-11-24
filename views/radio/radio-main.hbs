@@ -1,1 +1,26 @@
 <h1>Radio</h1>
+
+<form action="/radio" method="POST">
+    <div>
+        <label for="track">Choose a track to start</label>
+        <input type="text" name="track" id="track">
+    </div>
+    <div>
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+
+
+{{#each tracks}}
+<div>
+    <a href="/radio/new-mix?genre=${{genre}}">
+
+    <img src="{{artist.picture_big}}">
+    <h4>{{title_short}}</h4>
+    <p>{{artist.name}}</p>
+    <audio controls src="{{preview}}"></audio>
+
+    </a>
+</div>
+{{/each}}

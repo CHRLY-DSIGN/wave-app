@@ -34,13 +34,14 @@
 
 {{#each searchTrack.data.data}}
 <div>
-    <a href="#">
 
     <img src="{{artist.picture_big}}">
     <h4>{{title_short}}</h4>
     <p>{{artist.name}}</p>
     <audio controls src="{{preview}}"></audio>
+    <a href="/playlis/add-to-playlist">Add to playlist</a>
 
-    </a>
+
+    {{!-- crear enlace a endpoint pasándole id de la canción --}}
 </div>
 {{/each}}

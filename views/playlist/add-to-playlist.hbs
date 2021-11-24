@@ -1,0 +1,23 @@
+<h1>Add {{song.data.title}} to the playlist:</h1>
+
+{{!-- <p>{{song.data.id}}</p> --}}
+
+<form action="/playlist/{{song.data.id}}/add-to-playlist" method="POST">
+    <div>
+        <label for="playlist-list"></label>
+        <select name="playlist" id="playlist-list">
+            <option disabled>Choose a playlist</option>
+
+            {{#each playlist}}
+                <option value="{{_id}}">{{name}}</option>
+            {{/each}} 
+
+        </select>
+    </div>
+
+    <button type="submit">Add to playlist</button>
+</form>
+
+
+<a href="/playlist/new">Create new playlist</a>
+
