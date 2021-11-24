@@ -6,3 +6,13 @@
 body {
   font-family: 'Outfit', sans-serif;
 }
+
+audio::-webkit-progress-bar {
+  height: 30px;
+}
+
+#botondeplay {
+  width: 100px;
+  height: 40px;
+  background-color: blueviolet;
+}

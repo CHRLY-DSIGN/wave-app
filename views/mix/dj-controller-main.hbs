@@ -1,1 +1,41 @@
 <h1>Dj Session</h1>
+
+
+<div>
+    <form action="/djsession/search" method="GET">
+        <div>
+            <label for="playlist-list"></label>
+            <select name="playlist_id" id="playlist-list">
+                <option disabled>Choose a playlist</option>
+
+                {{#each playlist}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+
+            </select>
+        </div>
+
+        <button type="submit">Load playlist</button>
+    </form>
+</div>
+
+<div>
+    <h4>Playlist:{{playlistPlease.name}}</h4>
+
+
+    {{#each response}}
+    <div>
+        <h6>{{data.title_short}}</h6>
+        <p>{{data.artist.name}}</p>
+        <p>{{data.bpm}}</p>
+        <audio controls id="{{data.id}}" src="{{data.preview}}"></audio>
+        {{!-- <a href="/playlist/remove-from-playlist/{{data.id}}/{{../playlistPlease.id}}">Remove</a> --}}
+        
+    </div>
+   
+    {{/each}}
+
+    <button type="button" id="botondeplay">Click me</button>
+</div>
+
+<script src="../../js/mixer.js"></script>
