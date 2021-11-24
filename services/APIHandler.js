@@ -1,4 +1,4 @@
-/* const axios = require("axios")
+const axios = require("axios")
 
 
 class APIHandler {
@@ -13,7 +13,7 @@ class APIHandler {
     searchByTrack = (track) => this.axiosApp.get(`/search/track?q=${track}`)
 
     getAlbumTracks = (id) => this.axiosApp.get(`/album/${id})`)
-    // getAlbumTracks = (id) => this.axiosApp.get(`/album/${id})/tracks`)
+    /* getAlbumTracks = (id) => this.axiosApp.get(`/album/${id})/tracks`) */
 
     radioFunction = (genres) => this.axiosApp.get(`/radio/${genres}`)
 
@@ -26,4 +26,4 @@ class APIHandler {
     getAlbum = (id) => this.axiosApp.get(`/album/${id}`)
 }
 
-module.exports = ("APIHandler", APIHandler) */
+module.exports = ("APIHandler", APIHandler)

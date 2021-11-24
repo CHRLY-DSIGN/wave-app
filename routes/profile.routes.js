@@ -2,6 +2,8 @@ const router = require("express").Router();
 const { isLoggedIn, checkRoles } = require("../middlewares")
 const User = require("../models/User.model")
 const Playlist = require("../models/Playlist.model")
+const APIHandler = require("../services/APIHandler")
+const deezerApi = new APIHandler('https://api.deezer.com');
 
 //HOME
 
@@ -61,12 +63,20 @@ router.get("/:id", (req, res, next) => {
 router.get("/check-playlist/:id", (req, res, next) => {
 
   const {id} = req.params
+  let playlistPlease = undefined
 
   Playlist.findById(id)
     .then(playlist => {
-      console.log(playlist.track);
-      res.render("playlist/show-playlist-tracks", playlist)
+      playlistPlease = playlist
+      // res.render("playlist/show-playlist-tracks", playlist)
+      const tracksPromises = playlist.track.map(track => deezerApi.getTrackById(track))
+      
+      return tracksPromises
     })
+    .then(tracksPromises => Promise.all(tracksPromises))
+    .then(response => {
+      console.log(response[0].data);
+      res.render("playlist/show-playlist-tracks", {playlistPlease, response})})
     .catch(err => console.log(err))
 
 })

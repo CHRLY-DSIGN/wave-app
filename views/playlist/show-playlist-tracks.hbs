@@ -1,4 +1,12 @@
-<h4>Playlist:{{name}}</h4>
+<h4>Playlist:{{playlistPlease.name}}</h4>
 
 
-    {{track}}
+    {{#each response}}
+    <div>
+        <h6>{{data.title_short}}</h6>
+        <p>{{data.artist.name}}</p>
+        <audio controls src="{{data.preview}}"></audio>
+        
+    </div>
+   
+    {{/each}}
