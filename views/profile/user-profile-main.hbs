@@ -1,9 +1,12 @@
 <h1>Profile</h1>
 
-<a href="/playlist/new">Create new playlist</a>
 
 {{#each playlist}}
     <div>
-        <a href="#">{{name}}</a>
+        <p>{{name}}</p>
+        <a href="/profile/check-playlist/{{id}}">Check playlist</a>
     </div>
 {{/each}}
+
+
+<a href="/playlist/new">Create new playlist</a>

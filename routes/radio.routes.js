@@ -28,8 +28,8 @@ router.get("/:id", (req, res, next) => {
    const {id} = req.params
 
    deezerApi.getAlbum(id)
-    .then(album => console.log(album.data.genre_id))
-    /* .then(album => deezerApi.radioGenre(album.data.genre_id)) */
+    /* .then(album => console.log(album.data.genre_id)) */
+    .then(album => deezerApi.radioTracks(album.data.genre_id))
     .then(songs => {
       /* console.log(songs.data.data) */
       res.render('radio/radio-playlist', {songs: songs.data.data})})

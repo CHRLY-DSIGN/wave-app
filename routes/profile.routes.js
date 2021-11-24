@@ -56,6 +56,23 @@ router.get("/:id", (req, res, next) => {
 
 
 
+//CHECK PROFILE PLAYLISTS
+
+router.get("/check-playlist/:id", (req, res, next) => {
+
+  const {id} = req.params
+
+  Playlist.findById(id)
+    .then(playlist => {
+      console.log(playlist.track);
+      res.render("playlist/show-playlist-tracks", playlist)
+    })
+    .catch(err => console.log(err))
+
+})
+
+
+
 
 
 
