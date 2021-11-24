@@ -23,6 +23,18 @@ router.post("/new", (req, res, next) => {
 
 
 
+//DELETE PLAYLIST
+
+router.get("/:id/delete", (req, res, next) => {
+    const {id} = req.params
+
+    Playlist.findByIdAndDelete(id)
+        .then(res.redirect("/profile"))
+        .catch(err => console.log(err))
+})
+
+
+
 
 // ADD TO PLAYLIST
 
