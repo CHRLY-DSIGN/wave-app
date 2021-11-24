@@ -3,6 +3,7 @@
 {{#each tracks.data}}
     <div>
         <h6>{{title}}</h6>
+        <p>{{bpm}}</p>
         <audio controls src="{{preview}}"></audio>
         <a href="/playlist/{{id}}/add-to-playlist">Add to playlist</a>
     </div>

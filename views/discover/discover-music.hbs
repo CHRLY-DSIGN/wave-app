@@ -38,8 +38,9 @@
     <img src="{{artist.picture_big}}">
     <h4>{{title_short}}</h4>
     <p>{{artist.name}}</p>
+    <p>{{bpm}}</p>
     <audio controls src="{{preview}}"></audio>
-    <a href="/playlis/add-to-playlist">Add to playlist</a>
+    <a href="/playlist/{{id}}/add-to-playlist">Add to playlist</a>
 
 
     {{!-- crear enlace a endpoint pasándole id de la canción --}}

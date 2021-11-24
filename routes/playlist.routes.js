@@ -71,6 +71,31 @@ router.post("/:id/add-to-playlist", (req, res, next) => {
 })
 
 
+// DELETE FROM PLAYLIST
+
+
+router.get("/remove-from-playlist/:trackId/:playlistId", isLoggedIn, (req, res, next) => {
+
+    const { trackId, playlistId } = req.params
+    const userId = req.session.currentUser._id
+
+    console.log("trackid", trackId, "playlistid", playlistId)
+
+    res.render("playlist/remove-from-playlist", {trackId, playlistId})
+
+  });
+
+
+  router.post("/remove-from-playlist/:trackId/:playlistId", (req, res, next) => {
+    
+    const {playlistId, trackId} = req.params
+    
+    Playlist
+        .findByIdAndUpdate(playlistId, { $pull: { track: trackId }}, { new: true } )
+        .then(res.redirect("/profile"))
+        .catch(err => console.log(err))
+})
+
 
 
 module.exports = router;

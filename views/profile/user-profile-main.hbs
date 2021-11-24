@@ -1,13 +1,17 @@
 <h1>Profile</h1>
 
+<div>
+    <h2>Playlists</h2>
+    {{#each playlist}}
+        <div>
+            <p>{{name}}</p>
+            <a href="/profile/check-playlist/{{id}}">Check playlist</a>
+            <a href="/playlist/{{id}}/delete">Delete playlist</a>
+        </div>
+    {{/each}}
 
-{{#each playlist}}
     <div>
-        <p>{{name}}</p>
-        <a href="/profile/check-playlist/{{id}}">Check playlist</a>
-        <a href="/playlist/{{id}}/delete">Delete playlist</a>
+        <a href="/playlist/new">Create new playlist</a>
     </div>
-{{/each}}
 
-
-<a href="/playlist/new">Create new playlist</a>
+</div>

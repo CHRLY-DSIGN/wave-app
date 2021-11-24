@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { isLoggedIn, checkRoles } = require("../middlewares")
 const User = require("../models/User.model")
+const Playlist = require("../models/Playlist.model")
 const APIHandler = require("../services/APIHandler")
 const deezerApi = new APIHandler('https://api.deezer.com');
 
