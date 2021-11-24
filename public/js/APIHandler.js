@@ -18,6 +18,12 @@ class APIHandler {
     radioFunction = (genres) => this.axiosApp.get(`/radio/${genres}`)
 
     getTrackById = (id) => this.axiosApp.get(`/track/${id}`)
+
+    radioTracks = (genreId) => this.axiosApp.get(`/radio/${genreId}/tracks`)
+   
+    radioGenre = (genreId) => this.axiosApp.get(`/radio/${genreId}`)
+
+    getAlbum = (id) => this.axiosApp.get(`/album/${id}`)
 }
 
 module.exports = ("APIHandler", APIHandler)

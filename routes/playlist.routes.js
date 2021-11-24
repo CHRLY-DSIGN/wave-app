@@ -48,12 +48,12 @@ router.get("/:id/add-to-playlist", isLoggedIn, (req, res, next) => {
 
 router.post("/:id/add-to-playlist", (req, res, next) => {
     
-    const {_id, name} = req.body
+    const {playlist} = req.body
     const {id} = req.params
     console.log(id);
     
 
-    Playlist.findByIdAndUpdate(_id, { $push: { track: id }}, { new: true } )
+    Playlist.findByIdAndUpdate(playlist, { $push: { track: id }}, { new: true } )
         .then(res.redirect("/discover/music"))
         .catch(err => console.log(err))
 })

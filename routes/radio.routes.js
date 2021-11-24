@@ -17,16 +17,26 @@ router.post("/", (req, res, next) => {
   const {track} = req.body
 
   deezerApi.searchByTrack(track)
-    /* .then(searchedTrack => console.log(searchedTrack)) */
-    .then(searchedTrack => res.render("radio/radio-main", {tracks: searchedTrack?.data.data}))
+    /* .then(searchedTrack => console.log(searchedTrack.data.data)) */
+    .then(searchedTrack => res.render("radio/radio-main", {searchedTrack}))
     .catch(err => console.log(err))
 })
 
 
-router.get("/new-mix", (req, res, next) => {
-  deezerApi.radioFunction()
-    .then()
-    .catch()
+router.get("/:id", (req, res, next) => {
+  
+   const {id} = req.params
+
+   deezerApi.getAlbum(id)
+    .then(album => console.log(album.data.genre_id))
+    /* .then(album => deezerApi.radioGenre(album.data.genre_id)) */
+    .then(songs => {
+      /* console.log(songs.data.data) */
+      res.render('radio/radio-playlist', {songs: songs.data.data})})
+    .catch(err => console.log(err))
 })
+
+
+
 
 module.exports = router;

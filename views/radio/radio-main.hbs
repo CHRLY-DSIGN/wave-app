@@ -12,15 +12,17 @@
 
 
 
-{{#each tracks}}
+{{#each searchedTrack.data.data}}
 <div>
-    <a href="/radio/new-mix?genre=${{genre}}">
+    <a href="/radio/{{album.id}}">
 
-    <img src="{{artist.picture_big}}">
+    <img src="{{{artist.picture_big}}}">
     <h4>{{title_short}}</h4>
     <p>{{artist.name}}</p>
     <audio controls src="{{preview}}"></audio>
+    
 
     </a>
+    <p>{{album.id}}</p>
 </div>
 {{/each}}

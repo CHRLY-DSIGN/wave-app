@@ -1,0 +1,13 @@
+<h3>Radio mix</h3>
+
+
+{{#each songs}}
+<div>
+    <h4>{{title_short}}</h4>
+    <p>{{artist.name}}</p>
+    <audio controls src="{{preview}}"></audio>
+    <a href="/playlis/add-to-playlist">Add to playlist</a>
+</div>
+
+{{/each}}
+
