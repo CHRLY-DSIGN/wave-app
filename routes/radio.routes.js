@@ -7,7 +7,7 @@ const deezerApi = new APIHandler('https://api.deezer.com');
 
 
 //RADIO
-router.get("/", (req, res, next) => {
+router.get("/", isLoggedIn, (req, res, next) => {
  res.render("radio/radio-main")  
 });
 

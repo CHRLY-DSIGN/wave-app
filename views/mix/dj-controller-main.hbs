@@ -34,8 +34,51 @@
     </div>
    
     {{/each}}
-
-    <button type="button" id="botondeplay">Click me</button>
 </div>
+
+<div>
+    <button type="button" id="botondeplay">Click me</button>
+    <select id='button1'>
+        {{#each response}}
+            <option value="{{data.id}}">{{data.title_short}}</option>
+        {{/each}}
+    </select>
+</div>
+
+
+<div>
+    <button type="button" id="track02">Click me</button>
+    <select id='diskRight'>
+        {{#each response}}
+            <option value="{{data.id}}">{{data.title_short}}</option>
+        {{/each}}
+    </select>
+</div>
+
+
+<div>
+    <button type="button" id="track03">Click me</button>
+    <select id='cue01'>
+        {{#each response}}
+            <option value="{{data.id}}">{{data.title_short}}</option>
+        {{/each}}
+    </select>
+</div>
+
+
+<div>
+    <button type="button" id="track04">Click me</button>
+    <select id='cue02'>
+        {{#each response}}
+            <option value="{{data.id}}">{{data.title_short}}</option>
+        {{/each}}
+    </select>
+</div>
+
+
+
+
+
+
 
 <script src="../../js/mixer.js"></script>
