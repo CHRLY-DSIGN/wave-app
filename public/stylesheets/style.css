@@ -844,3 +844,79 @@ h4 {
 
 
 
+/* ALBUM TRACKS */
+
+.album-img-list {
+  height: 250px;
+}
+
+.album-img-title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+
+
+.album-card-artist {
+  color: #55e8fc;
+  font-size: 20px;
+  font-weight: 300;
+  transition-duration: 3s;
+}
+
+.album-list-title {
+  font-size: 90px;
+  color: #edebf3;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+
+.margin-left {
+  margin-left: 40px;
+}
+
+.margin-top {
+  margin-top: 90px;
+}
+
+.add-to-playlist-container {
+  height: 90px;
+  width: 90px;
+  border-radius: 20px;
+  background-color: #6e6c70;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.add-to-playlist-container:hover {
+  background-color: #55e8fc;
+  transition-duration: 0.5s;
+}
+
+.add-to-playlist-container:hover .add-to-playlist {
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.add-to-playlist {
+  text-decoration: none;
+  color: #222222;
+  transition-duration: 1s;
+  font-weight: 400;
+}
+
+
+.add-to-playlist-title {
+  color: white;
+  font-size: 100px;
+  font-weight: 500;
+  width: 900px;
+  text-align: center;
+}

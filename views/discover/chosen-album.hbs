@@ -1,10 +1,30 @@
-<h5>{{title}}</h5>
+<body class="background-default">
+    <div class="center-elements">
+        <div class="album-img-title margin-top">
+            <img class="album-img-list" src="{{cover_big}}">
+            <div class="margin-left">
+                <p class="album-list-title">{{title}}</p>
+                <p class="album-card-artist">{{artist.name}}</p>
+            </div>
+        </div>
 
-{{#each tracks.data}}
-    <div>
-        <h6>{{title}}</h6>
-        <p>{{bpm}}</p>
-        <audio controls src="{{preview}}"></audio>
-        <a href="/playlist/{{id}}/add-to-playlist">Add to playlist</a>
     </div>
-{{/each}}
+        
+
+        {{#each tracks.data}}
+        <div class="playlist-rows-container">
+            <div class="check-playlist-track-container">
+                <div>
+                    <div class="track-playlist-title-container">
+                        <p class="track-playlist-title">{{title}}</p>
+                    </div>
+                </div>
+                    <audio controls src="{{preview}}"></audio>
+            </div>
+                    <div class="add-to-playlist-container">
+                        <a href="/playlist/{{id}}/add-to-playlist" class="add-to-playlist">Add to playlist</a>
+                    </div>
+        </div>
+        {{/each}}
+
+</body>
