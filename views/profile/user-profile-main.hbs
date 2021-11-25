@@ -1,17 +1,61 @@
-<h1>Profile</h1>
+<body class="background-default">   
 
-<div>
-    <h2>Playlists</h2>
-    {{#each playlist}}
-        <div>
-            <p>{{name}}</p>
-            <a href="/profile/check-playlist/{{id}}">Check playlist</a>
-            <a href="/playlist/{{id}}/delete">Delete playlist</a>
-        </div>
-    {{/each}}
-
-    <div>
-        <a href="/playlist/new">Create new playlist</a>
+    <div class="profile-title-container">
+        <p class="profile-title">My Profile</p>
     </div>
 
-</div>
+    <div class="profile-basic-org">   
+
+       
+            <div>
+                <div class="playlist-title-container">
+                    <p class="playlist-section-title" >Playlists</p>
+                </div>
+
+                {{#each playlist}}
+
+                    <div class="playlist-cards-container">
+                        <a class="playlist-container no-decoration" href="/profile/check-playlist/{{id}}">
+                            <p class="playlist-title">{{name}}</p>
+                        </a>
+                        <div class="delete-btn-container">
+                            <a href="/playlist/{{id}}/delete"><img class="delete-icon" src="/wave_delete_icon_mk2.png"></a>
+                        </div>
+                    </div>
+
+                {{/each}}
+
+                <div class="new-playlist-container">
+                    <a class="new-playlist-txt" href="/playlist/new">+</a>
+                </div>
+
+            </div>
+
+
+            <div class="profile-containers-container">
+
+                <div class="playlist-title-container">
+                    <p class="playlist-section-title" >Press play</p>
+                </div>
+
+                <div class="playlist-title-container2">
+                    <p class="playlist-section-title" ></p>
+                </div>
+
+                <div class="discover-profile-container-mk2"></div>
+
+                <div class="discover-profile-org">
+                    <a class="discover-profile-container-02 no-decoration" href="/discover/music">
+                        <img class="discover-music-profile-icon" src="/discover_music_icon.png">
+                        <p class="profile-links-txt">New music</p>
+                    </a>
+                    <div class="discover-profile-container"></div>
+                    <div class="discover-profile-container"></div>
+                    <div class="discover-profile-container"></div>
+                </div>
+            </div>
+        
+
+
+    </div>
+</body>

@@ -409,6 +409,7 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 50px;
+  cursor: pointer;
   /* padding: 0px 60px; */
 }
 
@@ -461,4 +462,241 @@ h4 {
   background: rgb(0,179,129);
   background: linear-gradient(215deg, rgba(0,179,129,1) 6%, rgba(0,191,219,1) 48%, rgba(107,0,255,1) 93%);
   transition-duration: 1s;
+}
+
+
+.profile-basic-org {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.playlist-container {
+  background-color: #2C2C30;
+  width: 400px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 1s ;
+}
+
+.playlist-container:hover {
+  animation: field-border 5s infinite 0s alternate;
+  background-color: #5f5e63;
+  transition-duration: 0.5s ;
+}
+
+.playlist-container:hover .playlist-title {
+  color: white;
+}
+
+.playlist-cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition-duration: 0.5s;
+}
+
+.playlist-cards-container:hover {
+  margin-left: 15px;
+  transition-duration: 0.5s;
+}
+
+
+.delete-btn-container {
+  background-color: #3A3536;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.delete-btn-container:hover {
+  background-color: #730625;
+  transition-duration: 0.5s;
+}
+
+.delete-btn-container:hover img {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.delete-icon {
+  height: 30px;
+  mix-blend-mode: hard-light;
+  opacity: 0.25;
+  transition-duration: 1s;
+}
+
+
+.playlist-title {
+  text-decoration: none;
+  color: #A9A7AF;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+.new-playlist-txt {
+  color: #5f5e63;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+
+.new-playlist-container {
+  outline: solid 4px #5f5e63;
+  outline-offset: -4px;
+  outline-style: dotted;
+  width: 400px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 1s ;
+}
+
+
+.new-playlist-container:hover {
+  animation: field-border 5s infinite 0s alternate;
+  transition-duration: 0.5s;
+}
+
+.new-playlist-container:hover .new-playlist-txt {
+  animation: txt-color 5s infinite 0s alternate;
+} 
+
+@keyframes txt-color {
+  from {color: #5b02ff;}
+  to {color: #02f7ff;}
+}
+
+
+.profile-title {
+  font-size: 120px;
+  color: #edebf3;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.profile-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.playlist-title-container {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.playlist-title-container2 {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.playlist-section-title {
+  color: #55e8fc;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.discover-profile-container {
+  background-color: #27272b;
+  border-radius: 40px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px
+}
+
+
+.discover-profile-container-02 {
+  background-color: #27272b;
+  border-radius: 40px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+  background: rgb(255,164,62);
+  background: linear-gradient(216deg, rgba(255,164,62,1) 0%, rgba(255,5,125,1) 100%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.discover-profile-container-mk2 {
+  background-color: #121213;
+  border-radius: 40px;
+  height: 258px;
+  width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin: 0px 10px 20px 10px; 
+  background-image: url("/profile_dj_img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -8em;
+}
+
+
+.discover-profile-org {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.profile-containers-container {
+  margin: 0px 0px 0px 100px;
+}
+
+
+.discover-music-profile-icon {
+  height: 150px;
+  margin-bottom: 0px;
+  mix-blend-mode: soft-light;
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-02:hover {
+  outline: solid 6px #02f7ff;
+  outline-offset: -6px;
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-02:hover .discover-music-profile-icon {
+  mix-blend-mode: normal;
+  transition-duration: 0.5s;
+}
+
+.profile-links-txt {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
 }
