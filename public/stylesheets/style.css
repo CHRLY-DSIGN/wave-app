@@ -997,7 +997,7 @@ h4 {
   width: 1159px;
   height: 578px;
   background-color: #3A3536;
-  background-image: url("/DJ_CONTROLLER.png");
+  /* background-image: url("/DJ_CONTROLLER.png"); */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1096,11 +1096,223 @@ h4 {
   border-radius: 35px;
   display: flex;
   flex-direction: row;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 
 
 .org-bottom-elements {
-padding: 0px 400px 0px 130px;  
+padding: 0px 400px 0px 100px;  
+}
+
+
+
+
+.mixer-base-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.mixer-primary-third-division {
+  width: 386px ;
+  height: 578px;
+  background-color: #000 ;
+}
+
+
+.mixer-third-base-mid {
+  background: rgb(213,212,211);
+  background: linear-gradient(150deg, rgb(69, 69, 70) 0%, rgb(24, 24, 24) 40%, rgb(12, 12, 12) 40%, rgba(0,0,0,1) 100%);
+}
+
+
+.mixer-mid-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mixer-mid-five-base {
+  width: 77px;
+  height: 440px;
+}
+
+
+.mixer-mid-top-base {
+  width: 386px;
+  height: 58px;
+}
+
+.mixer-mid-bottom-base {
+  width: 386px;
+  height: 80px;
+}
+
+.mixer-mid-five-border-right {
+  border-right: solid 3px #434246;
+}
+
+.mixer-mid-top-logo {
+  height: 20px;
+  margin-top: 15px;
+}
+
+.mixer-mid-top-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixer-mid-five-individual-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mixer-mid-btn-top {
+  width: 40px;
+  height: 10px;
+  background-color: #000;
+}
+
+
+.mixer-mid-pot-levels {
+  width: 35px;
+  height: 35px;
+  background-image: url("/pot_level_01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mixer-mid-pot-btn {
+  width: 25px;
+  height: 25px;
+  background-image: url("/pot_levels_btn_01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mixer-mid-first-fifth-white-squares {
+  width: 18px;
+  height: 12px;
+  border: solid 2px #fff;
+}
+
+.mixer-mid-first-white-squares-container {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+
+.mixer-mid-first-fifth-bottom-pot {
+  width: 40px;
+  height: 40px;
+  background-image: url("/pot_levels_btn_01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mixer-mid-bottom-pot-container {
+  margin-top: 10px;
+}
+
+.mixer-mid-level-lights {
+  width: 4px;
+  height: 130px;
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(255,162,0,1) 20%, rgba(255,162,0,1) 50%, rgba(0,255,51,1) 50%, rgba(0,255,51,1) 100%);
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+
+.mixer-mid-lights-pot-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-right: 15px;
+}
+
+.mixer-mid-mid-light-gray {
+  width: 77px;
+  height: 50px;
+  background-color: #232224;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixer-mid-mid-pot-levels {
+  width:40px ;
+  height: 40px;
+  background-image: url("/pot_level_02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixer-mid-mid-pot-btn {
+  width:25px ;
+  height: 25px;
+  background-image: url("/pot_btn_02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mixer-mid-mid-yellow-btn {
+  width: 40px;
+  height: 10px;
+  border: solid 2px #ffc400;
+  margin-top: 10px;
+}
+
+.mixer-mid-bottom-steps {
+  width: 50px;
+  height: 80px;
+  background-image: url("/steps_01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixer-mid-bottom-slider-btn {
+  width: 30px;
+  height: 20px;
+  background-image: url("/slider_btn_02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: #000000 0px 5px 10px;
+}
+
+.mixer-mid-bottom-blue-btn {
+  width: 40px;
+  height: 8px;
+  border: solid 2px #14c5f1;
+  margin-top: 15px;
+}
+
+.mixer-mid-bottom-purple-btn {
+  width: 40px;
+  height: 8px;
+  border: solid 2px #6914f1;
+  margin-top: 5px;
 }
