@@ -1,28 +1,42 @@
-<h3>Log-in</h3>
+<body class="background-headset">
 
-<form action="/login" method="POST">
+    <div class="center-elements">
+        <div>
+            <img class="main-logo" src="/wave_logo.png">
+        </div>
 
-    <div>
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="username" id="username">
+
+        <div class="login-container">
+            <p class="login-title">Log-in</p>
+
+            <form action="/login" method="POST">
+
+                <div class="form-field-container">
+                    <label class="login-form-label" for="username">Username</label>
+                    <input class="login-form-field" type="text" class="form-control" name="username" id="username">
+                </div>
+            
+                <div class="form-field-container margin-top">
+                    <label class="login-form-label" for="pwd">Password</label>
+                    <input class="login-form-field" type="password" class="form-control" name="pwd" id="pwd">
+                </div>
+
+
+                <button class="main-btn-2" type="submit" class="btn btn-dark btn-block btn-lg">Let's go!</button>
+
+            </form>
+
+            {{#if errorMessage}}
+                <div>
+                    {{errorMessage}}
+                </div>
+            {{/if}}
+        </div>
+
+
+        <div class="underline-div">
+            <a class="under-btn" href="/signup">Create an account</a>
+        </div>
     </div>
- 
-    <div>
-        <label for="pwd">Password</label>
-        <input type="password" class="form-control" name="pwd" id="pwd">
-    </div>
 
-
-    <button type="submit" class="btn btn-dark btn-block btn-lg">Confirm</button>
-
-</form>
-
-{{#if errorMessage}}
-    <div>
-        {{errorMessage}}
-    </div>
-{{/if}}
-
-<div>
-    <p>Don't have an account?</p><a href="/signup">Sign up now</a>
-</div>
+</body>

@@ -1,48 +1,76 @@
-<h3>Discover music</h3>
+<body class="background-default">
 
-<form action="/discover/music" method="POST">
-    <div>
-        <label for="artist">Search by artist</label>
-        <input type="text" name="artist" id="artist">
+    <div class="center-elements margin-top-3">
+        <div>
+            <p class="discover-title">Discover music</p>
+        </div>
+
+        <form action="/discover/music" method="POST">
+
+            <div class="fields-container">
+                <div class="form-field-container btn-margin">
+                    <label class="login-form-label-2" for="artist">Search by artist</label>
+                    <input class="login-form-field" type="text" name="artist" id="artist">
+                </div>
+
+                <div>
+                    <p class="slash-txt btn-margin">/</p>
+                </div>
+
+                <div class="form-field-container btn-margin">
+                    <label class="login-form-label-2" for="track">Search by track</label>
+                    <input class="login-form-field" type="text" name="track" id="track">
+                </div>
+                <div>
+                    <button class="search-btn" type="submit">Search</button>
+                </div>
+
+            </div>
+
+
+        </form>
     </div>
 
-    <div>
-        <label for="track">Search by track</label>
-        <input type="text" name="track" id="track">
+    <div class="album-grid-container">   
+        <div class="album-grid-container">
+
+            <div class="album-grid2">
+                {{#each searchArtist.data.data}}
+                <div class="album-card">
+                    <a href="/discover/music/{{album.id}}">
+
+                    <img class="album-cover" src="{{album.cover_big}}">
+                    <h4 class="no-decoration">{{album.title}}</h4>
+                    <p class="album-artist no-decoration">{{artist.name}}</p>
+
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+
+        <div class="album-grid-container">
+            <div class="track-grid">
+                {{#each searchTrack.data.data}}
+                <div class="track-card">
+
+                    <img class="album-cover" src="{{artist.picture_big}}">
+                    <h4>{{title_short}}</h4>
+                    
+                    
+                    <div>
+                        <p class="album-artist">{{artist.name}}</p>
+                        <p>{{bpm}}</p>
+                    </div>
+                    
+                    <audio class="margin-top" controls src="{{preview}}"></audio>
+                    <a class="add-to-playlist-btn-1" href="/playlist/{{id}}/add-to-playlist">Add to playlist</a>
+
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
     </div>
-
-    <button type="submit">Search</button>
-
-</form>
-
-
-
-{{#each searchArtist.data.data}}
-<div>
-    <a href="/discover/music/{{album.id}}">
-
-    <img src="{{album.cover_big}}">
-    <h4>{{album.title}}</h4>
-    <p>{{artist.name}}</p>
-
-    </a>
-</div>
-{{/each}}
-
-
-
-
-{{#each searchTrack.data.data}}
-<div>
-
-    <img src="{{artist.picture_big}}">
-    <h4>{{title_short}}</h4>
-    <p>{{artist.name}}</p>
-    <p>{{bpm}}</p>
-    <audio controls src="{{preview}}"></audio>
-    <a href="/playlist/{{id}}/add-to-playlist">Add to playlist</a>
-
-
-    {{!-- crear enlace a endpoint pasándole id de la canción --}}
-</div>
-{{/each}}
+</body>

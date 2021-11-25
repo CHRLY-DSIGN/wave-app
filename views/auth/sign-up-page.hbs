@@ -1,34 +1,55 @@
-<h3>Sign up</h3>
+<body class="background-headset">
 
-<form action="/signup" method="POST">
+    <div class="center-elements">
 
-    <div>
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="username" id="username">
-    </div>
+        <div>
+            <img class="main-logo-2" src="/wave_logo.png">
+        </div>
 
-    <div>
-        <label for="name">Name</label>
-        <input type="text" class="form-control" name="name" id="name">
-    </div>
-    
-    <div>
-        <label for="email">E-mail</label>
-        <input type="email" class="form-control" name="email" id="email">
-    </div>
+        <div class="login-container-2">
+            <p class="login-title">Sign up</p>
 
-    <div>
-        <label for="pwd">Password</label>
-        <input type="password" class="form-control" name="pwd" id="pwd">
-    </div>
+            <form action="/signup" method="POST">
+
+                <div class="form-field-container margin-top-2">
+                    <label class="login-form-label" for="username">Username</label>
+                    <input class="login-form-field" type="text" class="form-control" name="username" id="username">
+                </div>
+
+                <div class="form-field-container margin-top-2">
+                    <label class="login-form-label" for="name">Name</label>
+                    <input class="login-form-field" type="text" class="form-control" name="name" id="name">
+                </div>
+                
+                <div class="form-field-container margin-top-2">
+                    <label class="login-form-label" for="email">E-mail</label>
+                    <input class="login-form-field" type="email" class="form-control" name="email" id="email">
+                </div>
+
+                <div class="form-field-container margin-top-2">
+                    <label class="login-form-label" for="pwd">Password</label>
+                    <input class="login-form-field" type="password" class="form-control" name="pwd" id="pwd">
+                </div>
 
 
-    <button type="submit" class="btn btn-dark btn-block btn-lg">Let's go!</button>
+                <button class="main-btn-2 margin-top" type="submit" class="btn btn-dark btn-block btn-lg">Get me in!</button>
 
-</form>
+            </form>
+        </div>
 
-{{#if errorMessage}}
-    <div>
-        {{errorMessage}}
-    </div>
-{{/if}}
+        <div>
+            {{#if errorMessage}}
+                <div>
+                    {{errorMessage}}
+                </div>
+            {{/if}}
+        </div>
+
+
+        <div class="underline-div">
+            <a class="under-btn" href="/login">Already have an account? <span class="color-blue">Log in</span></a>
+        </div> 
+
+    </div>   
+
+</body>
