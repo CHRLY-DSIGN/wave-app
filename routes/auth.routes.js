@@ -14,6 +14,11 @@ router.get("/signup", (req, res) => {
 router.post("/signup", (req, res) => {
 
     const { username, name, email, pwd } = req.body
+
+    if ( username.length === 0 || name.length === 0 || email.length === 0 || pwd.length === 0 ) {      
+      res.render("auth/sign-up-page", { errorMessage: "Rellena todos los campos." })
+      return
+    }
   
     //Comprobamos si existe usuario
     User.find({ username })

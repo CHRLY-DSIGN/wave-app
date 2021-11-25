@@ -574,7 +574,7 @@ h4 {
 
 
 .new-playlist-container:hover {
-  animation: field-border 5s infinite 0s alternate;
+  animation: field-border 5s infinite 0s alternate, txt-color 5s infinite 0s alternate; 
   transition-duration: 0.5s;
 }
 
@@ -657,12 +657,22 @@ h4 {
   align-items: center;
   margin-bottom: 20px;
   margin: 0px 10px 20px 10px; 
-  background-image: url("/profile_dj_img.jpg");
+  background-image: url("/profile_dj_img_mk3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -8em;
 }
 
+.discover-profile-container-mk2:hover {
+  animation: field-border 5s infinite 0s alternate;
+}
+
+
+.begin-session {
+  font-size: 90px;
+  font-weight: 500;
+  color: #ffffff;
+}
 
 .discover-profile-org {
   display: flex;
@@ -700,3 +710,88 @@ h4 {
   font-weight: 500;
   margin-top: 10px;
 }
+
+.check-playlist-title {
+  font-size: 90px;
+  color: #edebf3;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+
+.check-playlist-track-container {
+  height: 80px;
+  width: 900px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #2C2C30;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.check-playlist-track-container:hover {
+  animation: field-border 5s infinite 0s alternate;
+}
+
+.check-playlist-delete-container {
+  width: 40px;
+  height: 40px;
+  background-color: #2e2d30;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.check-playlist-delete-container:hover {
+  background-color: #730625;
+}
+
+
+.remove-cross-icon {
+  height: 15px;
+  margin-top: 0px;
+}
+
+.playlist-rows-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-playlist-img {
+  height: 70px;
+  border-radius: 20px;
+}
+
+.img-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.track-playlist-title {
+  color: #edebf3;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.track-playlist-title-container {
+  margin-left: 30px;
+}
+
+
+.track-playlist-artist {
+  color: #55e8fc;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+

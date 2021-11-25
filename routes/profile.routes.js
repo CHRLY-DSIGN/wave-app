@@ -3,6 +3,7 @@ const { isLoggedIn, checkRoles } = require("../middlewares")
 const User = require("../models/User.model")
 const Playlist = require("../models/Playlist.model")
 const APIHandler = require("../services/APIHandler")
+const { isMine } = require("../utils");
 const deezerApi = new APIHandler('https://api.deezer.com');
 
 //HOME
@@ -76,7 +77,9 @@ router.get("/check-playlist/:id", (req, res, next) => {
     .then(tracksPromises => Promise.all(tracksPromises))
     .then(response => {
       console.log(response[0].data);
-      res.render("playlist/show-playlist-tracks", {playlistPlease, response})})
+
+      res.render("playlist/show-playlist-tracks", {playlistPlease, response, isMine: isMine(req.session.currentUser._id, playlistPlease.owner)})})
+      /* res.render("playlist/show-playlist-tracks", {playlistPlease, response})}) */
     .catch(err => console.log(err))
 
 })

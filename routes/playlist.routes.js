@@ -2,7 +2,8 @@ const router = require("express").Router();
 const { isLoggedIn, checkRoles } = require("../middlewares")
 const User = require("../models/User.model")
 const Playlist = require("../models/Playlist.model")
-const APIHandler = require("../services/APIHandler")
+const APIHandler = require("../services/APIHandler");
+const { isMine } = require("../utils");
 const deezerApi = new APIHandler('https://api.deezer.com');
 
 
@@ -81,7 +82,16 @@ router.get("/remove-from-playlist/:trackId/:playlistId", isLoggedIn, (req, res, 
 
     console.log("trackid", trackId, "playlistid", playlistId)
 
-    res.render("playlist/remove-from-playlist", {trackId, playlistId})
+    Playlist.findById(playlistId)
+    .then(playlist => {
+        if(!isMine(userId, playlist.owner)) {
+            res.redirect('/');
+            return;
+        }
+        res.render("playlist/remove-from-playlist", {trackId, playlistId})
+    })
+
+    /* res.render("playlist/remove-from-playlist", {trackId, playlistId}) */
 
   });
 

@@ -1,13 +1,34 @@
-<h4>Playlist:{{playlistPlease.name}}</h4>
+<body class="background-default">
+    <div class="center-elements">
+        <p class="check-playlist-title">Playlist:{{playlistPlease.name}}</p>
+    </div>
 
 
     {{#each response}}
-    <div>
-        <h6>{{data.title_short}}</h6>
-        <p>{{data.artist.name}}</p>
-        <audio controls src="{{data.preview}}"></audio>
-        <a href="/playlist/remove-from-playlist/{{data.id}}/{{../playlistPlease.id}}">Remove</a>
-        
+    <div class="playlist-rows-container">
+        <div class="check-playlist-track-container">
+
+            <div class="img-title-container">
+                <div>
+                    <img class="track-playlist-img" src="{{data.album.cover_big}}">
+                </div>
+
+                <div class="track-playlist-title-container">
+                    <p class="track-playlist-title">{{data.title_short}}</p>
+                    <p class="track-playlist-artist">{{data.artist.name}}</p>
+                </div>
+            </div>
+            <audio controls src="{{data.preview}}"></audio>
+        </div>
+
+        {{#if ../isMine}}
+            <a href="/playlist/remove-from-playlist/{{data.id}}/{{../playlistPlease.id}}" class="check-playlist-delete-container no-decoration">
+                <img class="remove-cross-icon" src="/delete_cross_icon.png">
+            </a>
+        {{/if}}
+
     </div>
+        
    
     {{/each}}
+</body>
