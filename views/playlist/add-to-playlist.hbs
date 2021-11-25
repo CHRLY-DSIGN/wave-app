@@ -1,28 +1,30 @@
 <body class="background-default">
     <div class="center-elements">
         <div class="add-to-playlist-title">
-            <p>Add <span>{{song.data.title}}</span> to the playlist:</p>
+            <p>Add <span class="color-blue-light">{{song.data.title}}</span> to the playlist:</p>
         </div>
 
 
         <form action="/playlist/{{song.data.id}}/add-to-playlist" method="POST">
-            <div>
+            <div class="center-elements margin-top-4">
                 <label for="playlist-list"></label>
-                <select name="playlist" id="playlist-list">
+                <select class="select-style-01" name="playlist" id="playlist-list">
                     <option disabled>Choose a playlist</option>
 
                     {{#each playlist}}
-                        <option value="{{_id}}">{{name}}</option>
+                        <option class="select-form-base" value="{{_id}}">{{name}}</option>
                     {{/each}} 
 
                 </select>
             </div>
-
-            <button type="submit">Add to playlist</button>
+            <div class="center-elements">
+                <button class="main-btn margin-top-4" type="submit">Add to playlist</button>
+            </div>
         </form>
 
-
-        <a href="/playlist/new">Create new playlist</a>
+        <div class="underline-div">
+            <a class="under-btn" href="/playlist/new">Create new playlist</a>
+        </div>
     </div>
 
 </body>

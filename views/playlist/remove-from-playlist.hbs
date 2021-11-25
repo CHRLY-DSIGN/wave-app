@@ -1,7 +1,13 @@
-<h3>Sure you want to remove this song?</h3>
+<body class="background-default">
+    <div class="center-elements">
+        <p class="add-to-playlist-title">Sure you want to remove this song?</p>
 
-<form action="/playlist/remove-from-playlist/{{trackId}}/{{playlistId}}" method="POST">
-    <a href="/profile">No, cancel</a>
-    
-    <button type="submit">Yes, delete</button>
-</form>
+        <form action="/playlist/remove-from-playlist/{{trackId}}/{{playlistId}}" method="POST">
+            
+            <div class="margin-top-4">
+                <button class="main-btn-3 margin-general-delete" type="submit">Yes, delete</button>
+                <a href="/profile" class="main-btn-5">No, cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
