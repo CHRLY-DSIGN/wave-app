@@ -795,3 +795,52 @@ h4 {
 
 
 
+
+
+
+/* DISCOVER USERS */
+
+.user-card {
+  width: 300px;
+  height: 70px;
+  background-color: #3A3536;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  margin-left:5px ;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition-duration: 3s;
+}
+
+.user-card:hover {
+  animation: field-border 5s infinite 0s alternate;
+  margin: 10px;
+  transition-duration: 0.5s;
+  background-color: #b6b4c0;
+}
+
+.user-card:hover .user-card-title {
+  color: #222124;
+  transition-duration: 0.5s;
+}
+
+
+.user-card-title {
+  color: #ACAAAD;
+  font-size: 18px;
+  font-weight: 400;
+  transition-duration: 3s;
+}
+
+.user-cards-org {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px 10em ;
+}
+
+
+

@@ -1,19 +1,16 @@
-<h3>Discover users</h3>
+<body class="background-default">
+    <div class="center-elements">
+        <div>
+            <p class="discover-title">Discover users</p>
+        </div>
 
-
-{{!-- TODO search users by name --}}
-<form action="/discover/music" method="POST">
-<div>
-    <label for="user">Who are you looking for?</label>
-    <input type="text" name="user" id="user">
-</div>
-</form>
-
-{{#each allUsers}}
-    <div>
-        <p>{{username}}</p>
-        <a href="/profile/{{_id}}">Visit profile</a>
-        <button>Follow</button>
-        {{!-- TODO visit users profiles and maybe follow them --}}
+        <div class="user-cards-org">
+            {{#each allUsers}}
+                <a href="/profile/{{_id}}" class="user-card no-decoration">
+                    <p class="user-card-title">{{username}}</p>
+                </a>
+            {{/each}}
+        </div>
     </div>
-{{/each}}
+
+</body>
