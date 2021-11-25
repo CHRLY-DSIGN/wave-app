@@ -1,79 +1,158 @@
-<h1>Dj Session</h1>
-
-
-<div>
-    <form action="/djsession/search" method="GET">
-        <div>
-            <label for="playlist-list"></label>
-            <select name="playlist_id" id="playlist-list">
-                <option disabled>Choose a playlist</option>
-
-                {{#each playlist}}
-                    <option value="{{_id}}">{{name}}</option>
-                {{/each}}
-
-            </select>
+<body class="background-default">
+        
+        <div class="dj-session-title-view-flex">
+            <p class="dj-session-title-view">Dj Session</p>
         </div>
 
-        <button type="submit">Load playlist</button>
-    </form>
-</div>
 
-<div>
-    <h4>Playlist:{{playlistPlease.name}}</h4>
+    <div class="center-elements">
 
 
-    {{#each response}}
-    <div>
-        <h6>{{data.title_short}}</h6>
-        <p>{{data.artist.name}}</p>
-        <p>{{data.bpm}}</p>
-        <audio controls id="{{data.id}}" src="{{data.preview}}"></audio>
-        {{!-- <a href="/playlist/remove-from-playlist/{{data.id}}/{{../playlistPlease.id}}">Remove</a> --}}
-        
+
+
+
+
+        <div class="mixer-and-tracks-org mixer-and-tracks-margin-top">
+            <div class="mixer-base">
+                
+            </div>
+
+
+            <div class="mixer-track-list-container">
+                
+
+                <div>
+                    <p class="mixer-playlist-title">Playlist: <span class="title-color-cicle">{{playlistPlease.name}}</span></p>
+
+
+                    {{#each response}}
+                    <div class="mixer-playlist-track-info">
+
+                        <div class="mixer-underline-div"></div>
+                        
+                        <div class="mixer-playlist-track-info">
+                            <p class="mixer-playlist-tracks-title">{{data.title_short}}</p>
+                            <div class="mixer-artist-bpm">
+                                <p class="mixer-playlist-tracks-artist">{{data.artist.name}}</p>
+                                <p class="mixer-playlist-tracks-artist">bpm: {{data.bpm}}</p>
+                            </div>
+                        </div>
+                        <div class="center-elements">
+                            <audio class="audio-controls-mixer" controls id="{{data.id}}" src="{{data.preview}}"></audio>
+                        </div>
+
+                        
+                    
+                        
+                    </div>
+                
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="org-bottom-elements">
+        <div class="mixer-btns-org">
+
+            <div class="choose-playlist-container">
+
+                <p>Pick a playlist to start:</p>
+
+                <form action="/djsession/search" method="GET">
+                    <div>
+                        <label for="playlist-list"></label>
+                        <select name="playlist_id" id="playlist-list">
+                            <option disabled>Choose a playlist</option>
+
+                            {{#each playlist}}
+                                <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+
+                        </select>
+                    </div>
+
+                    <button type="submit">Load playlist</button>
+                </form>
+            </div>
+
+            <div class="btns-container">
+
+                <div>
+                    <div>
+                        <button type="button" id="botondeplay">Click me</button>
+                        <select id='button1'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <button type="button" id="track02">Click me</button>
+                        <select id='diskRight'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <button type="button" id="track03">Click me</button>
+                        <select id='cue01'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <button type="button" id="track04">Click me</button>
+                        <select id='cue02'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <button type="button" id="track05">Click me</button>
+                        <select id='play01'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <button type="button" id="track06">Click me</button>
+                        <select id='play02'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
    
-    {{/each}}
-</div>
-
-<div>
-    <button type="button" id="botondeplay">Click me</button>
-    <select id='button1'>
-        {{#each response}}
-            <option value="{{data.id}}">{{data.title_short}}</option>
-        {{/each}}
-    </select>
-</div>
-
-
-<div>
-    <button type="button" id="track02">Click me</button>
-    <select id='diskRight'>
-        {{#each response}}
-            <option value="{{data.id}}">{{data.title_short}}</option>
-        {{/each}}
-    </select>
-</div>
-
-
-<div>
-    <button type="button" id="track03">Click me</button>
-    <select id='cue01'>
-        {{#each response}}
-            <option value="{{data.id}}">{{data.title_short}}</option>
-        {{/each}}
-    </select>
-</div>
-
-
-<div>
-    <button type="button" id="track04">Click me</button>
-    <select id='cue02'>
-        {{#each response}}
-            <option value="{{data.id}}">{{data.title_short}}</option>
-        {{/each}}
-    </select>
-</div>
+   
+   
+   
 
 
 
@@ -81,4 +160,8 @@
 
 
 
-<script src="../../js/mixer.js"></script>
+
+
+    
+        <script src="../../js/mixer.js"></script>
+</body>

@@ -11,12 +11,6 @@ audio::-webkit-progress-bar {
   height: 30px;
 }
 
-#botondeplay {
-  width: 100px;
-  height: 40px;
-  background-color: blueviolet;
-}
-
 .nav-bar {
   background-color: #1D1E26;
   padding: 14px 100px;
@@ -962,4 +956,151 @@ h4 {
   font-size: 20px;
   color: white;
   border-radius: 12px;
+}
+
+
+
+
+
+/* DJ SESSION STYLES */ 
+
+
+.dj-session-title-view {
+  color: #d9d7e0;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.dj-session-title-view-flex {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+.background-djsession {
+  background-image: url("/dj_session_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mixer-and-tracks-org {
+  display: flex;
+  flex-direction: row;
+}
+
+.mixer-and-tracks-margin-top {
+  margin-top: 20px;
+}
+
+.mixer-base {
+  width: 1159px;
+  height: 578px;
+  background-color: #3A3536;
+  background-image: url("/DJ_CONTROLLER.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.mixer-track-list-container {
+  width: 300px;
+  height: 650px;
+  background-color: #202022;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+
+.mixer-playlist-title {
+  color: #ACAAAD;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title-color-cicle {
+  animation: text-title-cicle 5s infinite 0s alternate;
+}
+
+@keyframes text-title-cicle {
+  from {color: #ff9300;}
+  to {color: #ff057d;}
+}
+
+
+.audio-controls-mixer {
+  height: 20px;
+  width: 250px;
+  /* mix-blend-mode: darken; */
+  filter: invert();
+  mix-blend-mode:lighten;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.mixer-artist-bpm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 40px;
+}
+
+.mixer-playlist-track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.mixer-playlist-tracks-title {
+  margin: 0px 40px;
+  /* color: #55e8fc; */
+  color: #5447c4;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.mixer-playlist-tracks-artist {
+  color: #8e8d94;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+
+.mixer-btns-org {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.mixer-underline-div {
+  border-bottom: solid 3px #2e2d30;
+}
+
+
+.choose-playlist-container {
+  padding: 30px;
+  background-color: #5f5e63;
+  border-radius: 35px;
+}
+
+
+.btns-container {
+  padding: 30px;
+  background-color: #202022;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+}
+
+
+
+.org-bottom-elements {
+padding: 0px 400px 0px 130px;  
 }

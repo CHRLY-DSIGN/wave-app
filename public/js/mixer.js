@@ -43,3 +43,25 @@ let playBtn4 = document.getElementById("track04")
 playBtn4.addEventListener("click", () => play4())
 
 
+
+function play5() {
+    let play01 = document.getElementById("play01").value
+    let audio5 = document.getElementById(play01);
+    audio5.play()
+}
+
+let playBtn5 = document.getElementById("track05")
+playBtn5.addEventListener("click", () => play5())
+
+
+
+function play6() {
+    let play02 = document.getElementById("play02").value
+    let audio6 = document.getElementById(play02);
+    audio6.play()
+}
+
+let playBtn6 = document.getElementById("track06")
+playBtn6.addEventListener("click", () => play6())
+
+
