@@ -2134,3 +2134,41 @@ padding: 0px 400px 0px 100px;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+
+
+/* DASHBOARD STYLES */
+
+.background-dashboard {
+  background-image: url("/dashboard_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.dashboard-txt {
+  color: #8e8d94;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+.dashboard-txt-container {
+  width: 600px;
+  margin-top: 60px;
+}
+
+
+.dashboard-play {
+  text-decoration: none;
+  animation: play-color 4s infinite 0s alternate;
+}
+
+
+@keyframes play-color {
+  25% {color: #5b02ff;}
+  50% {color: #55e8fc;}
+  75% {color:#00ce22 ;}
+}
