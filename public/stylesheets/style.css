@@ -1991,3 +1991,33 @@ padding: 0px 400px 0px 100px;
   flex-direction: column;
   margin-top: 80px;
 }
+
+
+.radio-txt {
+  color: #7e7e7e;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+
+.main-btn-8 {
+  background: rgb(0,179,129);
+  background: linear-gradient(215deg, rgba(0,179,129,1) 6%, rgba(0,191,219,1) 48%, rgba(107,0,255,1) 93%);
+  padding: 12px 100px;
+  color: rgba(255, 255, 255, 0.911);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+  border-radius: 15px;
+  border: 0px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition-duration: 0.5s;
+}
+
+
+.main-btn-8:hover {
+  padding: 15px 105px;
+  transition-duration: 0.5s;
+}
