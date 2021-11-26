@@ -2172,3 +2172,9 @@ padding: 0px 400px 0px 100px;
   50% {color: #55e8fc;}
   75% {color:#00ce22 ;}
 }
+
+
+.margin-playlist-audio {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
