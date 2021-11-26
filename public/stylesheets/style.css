@@ -1944,6 +1944,7 @@ padding: 0px 400px 0px 100px;
 /* RADIO STYLES */
 
 .background-radio {
+  background-color: #000;
   background-image: url("/radio_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;

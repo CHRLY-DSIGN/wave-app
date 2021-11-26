@@ -1,13 +1,26 @@
-<h3>Radio mix</h3>
+<body class="background-default">
+    <div class="center-elements">
+        <p class="check-playlist-title">Radio mix</p>
+    </div>
 
 
-{{#each songs}}
-<div>
-    <h4>{{title_short}}</h4>
-    <p>{{artist.name}}</p>
-    <audio controls src="{{preview}}"></audio>
-    <a href="/playlis/add-to-playlist">Add to playlist</a>
-</div>
 
-{{/each}}
+        {{#each songs}}
+        <div class="playlist-rows-container">
+            <div class="check-playlist-track-container">
+                <div>
+                    <div class="track-playlist-title-container">
+                        <p class="track-playlist-title">{{title_short}}</p>
+                        <p class="track-playlist-artist">{{artist.name}}</p>
+                    </div>
+                </div>
+                <audio controls src="{{preview}}"></audio>
+            </div>
+                <div class="add-to-playlist-container">
+                    <a class="add-to-playlist" href="/playlis/add-to-playlist">Add to playlist</a>
+                </div>
+        </div>
 
+        {{/each}}
+
+</body>

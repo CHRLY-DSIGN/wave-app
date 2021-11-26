@@ -16,19 +16,26 @@
 
 
 
-        {{#each searchedTrack.data.data}}
-        <div>
-            <a href="/radio/{{album.id}}">
 
-            <img src="{{{artist.picture_big}}}">
-            <h4>{{title_short}}</h4>
-            <p>{{artist.name}}</p>
-            <audio controls src="{{preview}}"></audio>
-            
+        <div class="album-grid-container">
+            <div class="album-grid-container">
+                <div class="album-grid2">
+                    {{#each searchedTrack.data.data}}
+                    <div class="track-card">
+                        <a class="no-decoration" href="/radio/{{album.id}}">
 
-            </a>
-            <p>{{album.id}}</p>
-        </div>
-        {{/each}}
+                        <img class="album-cover" src="{{{artist.picture_big}}}">
+                        <h4>{{title_short}}</h4>
+                        <p class="album-artist no-decoration">{{artist.name}}</p>
+                        <audio class="margin-top-4" controls src="{{preview}}"></audio>
+                        
+
+                        </a>
+                        <p>{{album.id}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div> 
     </div>
 </body>
