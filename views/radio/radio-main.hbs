@@ -1,28 +1,34 @@
-<h1>Radio</h1>
+<body class="background-radio">
+    <div class="center-elements">
+        <div class="radio-layout">
+            <h1>Radio</h1>
 
-<form action="/radio" method="POST">
-    <div>
-        <label for="track">Choose a track to start</label>
-        <input type="text" name="track" id="track">
+            <form action="/radio" method="POST">
+                <div class="radio-layout-02">
+                    <label for="track">Choose a track to start</label>
+                    <input class="radio-form-field" type="text" name="track" id="track">
+                </div>
+                <div>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        {{#each searchedTrack.data.data}}
+        <div>
+            <a href="/radio/{{album.id}}">
+
+            <img src="{{{artist.picture_big}}}">
+            <h4>{{title_short}}</h4>
+            <p>{{artist.name}}</p>
+            <audio controls src="{{preview}}"></audio>
+            
+
+            </a>
+            <p>{{album.id}}</p>
+        </div>
+        {{/each}}
     </div>
-    <div>
-        <button type="submit">Search</button>
-    </div>
-</form>
-
-
-
-{{#each searchedTrack.data.data}}
-<div>
-    <a href="/radio/{{album.id}}">
-
-    <img src="{{{artist.picture_big}}}">
-    <h4>{{title_short}}</h4>
-    <p>{{artist.name}}</p>
-    <audio controls src="{{preview}}"></audio>
-    
-
-    </a>
-    <p>{{album.id}}</p>
-</div>
-{{/each}}
+</body>

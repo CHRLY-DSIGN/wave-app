@@ -1935,3 +1935,59 @@ padding: 0px 400px 0px 100px;
 .playlist-assigner:focus {
   animation: field-border 5s infinite 0s alternate;
 }
+
+
+
+
+
+
+/* RADIO STYLES */
+
+.background-radio {
+  background-image: url("/radio_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -50em;
+}
+
+
+.radio-form-field {
+  background-color: #1D1D1F;
+  border-radius: 12px;
+  width: 800px;
+  height: 60px;
+  border: 0px;
+  color: white;
+  text-indent: 20px;
+  font-size: 18px;
+}
+
+.radio-form-field:hover {
+  outline: solid 2px #5f5e63;
+}
+
+.radio-form-field:active {
+  outline: solid 3px #5b02ff;
+}
+
+.radio-form-field:focus {
+  /* outline: solid 3px #5b02ff; */
+  animation: field-border 5s infinite 0s alternate;
+  
+}
+
+.radio-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.radio-layout-02 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 80px;
+}
