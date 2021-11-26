@@ -641,6 +641,54 @@ h4 {
   cursor: pointer;
 }
 
+
+.discover-profile-container-03 {
+  background-color: #27272b;
+  border-radius: 40px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+  background: rgb(1,255,216);
+  background: linear-gradient(232deg, rgba(1,255,216,1) 0%, rgba(0,149,255,1) 78%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.discover-profile-container-04 {
+  background-color: #27272b;
+  border-radius: 40px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+  background: rgb(1,255,229);
+  background: linear-gradient(232deg, rgba(1,255,229,1) 26%, rgba(41,255,0,1) 100%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.discover-profile-container-05 {
+  background-color: #27272b;
+  border-radius: 40px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+  background: rgb(126,1,255);
+  background: linear-gradient(232deg, rgba(126,1,255,1) 20%, rgba(255,0,247,1) 100%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+
+
 .discover-profile-container-mk2 {
   background-color: #121213;
   border-radius: 40px;
@@ -683,7 +731,31 @@ h4 {
 .discover-music-profile-icon {
   height: 150px;
   margin-bottom: 0px;
-  mix-blend-mode: soft-light;
+  filter: opacity(0.3);
+  transition-duration: 0.5s;
+}
+
+.discover-user-profile-icon {
+  height: 120px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  filter: opacity(0.3);
+  transition-duration: 0.5s;
+}
+
+.discover-radio-profile-icon {
+  height: 120px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  filter: opacity(0.6);
+  transition-duration: 0.5s;
+}
+
+.discover-settings-profile-icon {
+  height: 130px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  filter: opacity(0.3);
   transition-duration: 0.5s;
 }
 
@@ -693,8 +765,41 @@ h4 {
   transition-duration: 0.5s;
 }
 
+.discover-profile-container-03:hover {
+  outline: solid 6px #ffffff;
+  outline-offset: -6px;
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-04:hover {
+  outline: solid 6px #ffffff;
+  outline-offset: -6px;
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-05:hover {
+  outline: solid 6px #ffffff;
+  outline-offset: -6px;
+  transition-duration: 0.5s;
+}
+
 .discover-profile-container-02:hover .discover-music-profile-icon {
-  mix-blend-mode: normal;
+  filter: opacity(1);
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-03:hover .discover-user-profile-icon {
+  filter: opacity(1);
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-04:hover .discover-radio-profile-icon {
+  filter: opacity(1);
+  transition-duration: 0.5s;
+}
+
+.discover-profile-container-05:hover .discover-settings-profile-icon {
+  filter: opacity(1);
   transition-duration: 0.5s;
 }
 
