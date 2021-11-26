@@ -1,9 +1,25 @@
-<h3>This is {{user.username}}'s profile</h3>
+<body class="background-default">
 
+        <div class="profile-title-container">
+        <p class="profile-title">This is {{user.username}}'s profile</p>
+        </div>
 
-<h4> Playlists</h4>
+    <div>
+        <div class="center-elements">
+            <div class="playlist-title-container">
+                <p class="playlist-section-title"> Playlists</p>
+            </div>
 
-{{#each playlist}}
-    <p>{{name}}</p>
-    <a href="/profile/check-playlist/{{id}}">Check playlist</a>
-{{/each}}
+            {{#each playlist}}
+                <div class="playlist-cards-container">
+                    {{!-- <p>{{name}}</p>
+                    <a href="/profile/check-playlist/{{id}}">Check playlist</a> --}}
+                    <a class="playlist-container no-decoration" href="/profile/check-playlist/{{id}}">
+                        <p class="playlist-title">{{name}}</p>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+</body>
