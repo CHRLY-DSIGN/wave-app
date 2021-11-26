@@ -56,13 +56,15 @@
 
                         </div>
                         
-                        <div class="mixer-disc-main">
+                        <button class="mixer-disc-main" type="button" id="botondeplay">
+                        {{!-- <div class="mixer-disc-main"> --}}
                             <div class="mixer-disc-screen">
                                 <div class="mixer-disc-screen-blue">
                                     
                                 </div>
                             </div>
-                        </div>
+                        {{!-- </div> --}}
+                        </button>
 
                         
 
@@ -73,10 +75,12 @@
                         
                         <div class="mixer-side-cue-play-container">
                             <div class="mixer-side-cue-btn">
-                                <div class="mixer-side-cue-btn-interior"></div>
+                                <button class="mixer-side-cue-btn-interior" type="button" id="track03"></button>
+                                {{!-- <div class="mixer-side-cue-btn-interior"></div> --}}
                             </div>
                             <div class="mixer-side-play-btn">
-                                <div class="mixer-side-play-btn-interior"></div>
+                                <button class="mixer-side-play-btn-interior" type="button" id="track05"></button>
+                                {{!-- <div class="mixer-side-play-btn-interior"></div> --}}
                             </div>
                         </div>
 
@@ -161,7 +165,7 @@
                             <div class="mixer-mid-btn-top"></div>
                             
                             <div class="mixer-mid-lights-pot-container">
-                                <div class="mixer-mid-level-lights"></div>
+                                <div class="mixer-mid-level-lights-01"></div>
                                 <div>
                                     <div class="mixer-mid-pot-levels">
                                         <div class="mixer-mid-pot-btn"></div>
@@ -202,7 +206,7 @@
                             <div class="mixer-mid-btn-top"></div>
                             
                             <div class="mixer-mid-lights-pot-container">
-                                <div class="mixer-mid-level-lights"></div>
+                                <div class="mixer-mid-level-lights-02"></div>
                                 <div>
                                     <div class="mixer-mid-pot-levels">
                                         <div class="mixer-mid-pot-btn"></div>
@@ -243,7 +247,7 @@
                             <div class="mixer-mid-btn-top"></div>
                             
                             <div class="mixer-mid-lights-pot-container">
-                                <div class="mixer-mid-level-lights"></div>
+                                <div class="mixer-mid-level-lights-03"></div>
                                 <div>
                                     <div class="mixer-mid-pot-levels">
                                         <div class="mixer-mid-pot-btn"></div>
@@ -284,7 +288,7 @@
                             <div class="mixer-mid-btn-top"></div>
                             
                             <div class="mixer-mid-lights-pot-container">
-                                <div class="mixer-mid-level-lights"></div>
+                                <div class="mixer-mid-level-lights-04"></div>
                                 <div>
                                     <div class="mixer-mid-pot-levels">
                                         <div class="mixer-mid-pot-btn"></div>
@@ -355,13 +359,15 @@
 
                     <div class="mixer-side-mid-base mixer-side-mid-org mixer-side-right-mid-margin">
 
-                        <div class="mixer-disc-main">
+                        <button class="mixer-disc-main" type="button" id="track02">
+                        {{!-- <div class="mixer-disc-main"> --}}
                             <div class="mixer-disc-screen">
                                 <div class="mixer-disc-screen-blue">
                                     
                                 </div>
                             </div>
-                        </div>
+                        {{!-- </div> --}}
+                        </button>
                         <div class="mixer-side-mid-right-org">
                             <div class="mixer-mid-pot-levels ">
                                 <div class="mixer-mid-pot-btn"></div>
@@ -381,10 +387,12 @@
                         
                         <div class="mixer-side-cue-play-container">
                             <div class="mixer-side-cue-btn">
-                                <div class="mixer-side-cue-btn-interior"></div>
+                                <button class="mixer-side-cue-btn-interior" type="button" id="track04"></button>
+                                {{!-- <div class="mixer-side-cue-btn-interior"></div> --}}
                             </div>
                             <div class="mixer-side-play-btn">
-                                <div class="mixer-side-play-btn-interior"></div>
+                                <button class="mixer-side-play-btn-interior" type="button" id="track06"></button>
+                                {{!-- <div class="mixer-side-play-btn-interior"></div> --}}
                             </div>
                         </div>
 
@@ -468,12 +476,12 @@
 
             <div class="choose-playlist-container">
 
-                <p>Pick a playlist to start:</p>
+                <p class="pick-playlist-title">Pick a playlist to start:</p>
 
                 <form action="/djsession/search" method="GET">
                     <div>
                         <label for="playlist-list"></label>
-                        <select name="playlist_id" id="playlist-list">
+                        <select class="playlist-assigner" name="playlist_id" id="playlist-list">
                             <option disabled>Choose a playlist</option>
 
                             {{#each playlist}}
@@ -483,7 +491,7 @@
                         </select>
                     </div>
 
-                    <button type="submit">Load playlist</button>
+                    <button class="load-playlist-btn" type="submit">Load playlist</button>
                 </form>
             </div>
 
@@ -491,8 +499,9 @@
 
                 <div>
                     <div>
-                        <button type="button" id="botondeplay">Click me</button>
-                        <select id='button1'>
+                        <p class="btn-title-bottom">DISC L:</p>
+                        {{!-- <button type="button" id="botondeplay">Click me</button> --}}
+                        <select class="track-assigner" id='button1'>
                             {{#each response}}
                                 <option value="{{data.id}}">{{data.title_short}}</option>
                             {{/each}}
@@ -501,29 +510,9 @@
 
 
                     <div>
-                        <button type="button" id="track02">Click me</button>
-                        <select id='diskRight'>
-                            {{#each response}}
-                                <option value="{{data.id}}">{{data.title_short}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <button type="button" id="track03">Click me</button>
-                        <select id='cue01'>
-                            {{#each response}}
-                                <option value="{{data.id}}">{{data.title_short}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-
-
-                    <div>
-                        <button type="button" id="track04">Click me</button>
-                        <select id='cue02'>
+                        <p class="btn-title-bottom">DISC R:</p>
+                        {{!-- <button type="button" id="track02">Click me</button> --}}
+                        <select class="track-assigner" id='diskRight'>
                             {{#each response}}
                                 <option value="{{data.id}}">{{data.title_short}}</option>
                             {{/each}}
@@ -533,8 +522,9 @@
 
                 <div>
                     <div>
-                        <button type="button" id="track05">Click me</button>
-                        <select id='play01'>
+                        <p class="btn-title-bottom">CUE 01:</p>
+                        {{!-- <button type="button" id="track03">Click me</button> --}}
+                        <select class="track-assigner" id='cue01'>
                             {{#each response}}
                                 <option value="{{data.id}}">{{data.title_short}}</option>
                             {{/each}}
@@ -543,8 +533,32 @@
 
 
                     <div>
-                        <button type="button" id="track06">Click me</button>
-                        <select id='play02'>
+                        <p class="btn-title-bottom">CUE 02:</p>
+                        {{!-- <button type="button" id="track04">Click me</button> --}}
+                        <select class="track-assigner" id='cue02'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <p class="btn-title-bottom">PLAY 01:</p>
+                        {{!-- <button type="button" id="track05">Click me</button> --}}
+                        <select class="track-assigner" id='play01'>
+                            {{#each response}}
+                                <option value="{{data.id}}">{{data.title_short}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <p class="btn-title-bottom">PLAY 02:</p>
+                        {{!-- <button type="button" id="track06">Click me</button> --}}
+                        <select class="track-assigner" id='play02'>
                             {{#each response}}
                                 <option value="{{data.id}}">{{data.title_short}}</option>
                             {{/each}}
