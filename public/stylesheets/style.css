@@ -2022,3 +2022,10 @@ padding: 0px 400px 0px 100px;
   padding: 15px 105px;
   transition-duration: 0.5s;
 }
+
+
+.background-profile-visit {
+  background-image: url("/profile_visit_bg_mk2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

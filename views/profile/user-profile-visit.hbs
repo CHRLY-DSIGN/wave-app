@@ -1,4 +1,4 @@
-<body class="background-default">
+<body class="background-profile-visit">
 
         <div class="profile-title-container">
         <p class="profile-title">This is {{user.username}}'s profile</p>
@@ -12,8 +12,6 @@
 
             {{#each playlist}}
                 <div class="playlist-cards-container">
-                    {{!-- <p>{{name}}</p>
-                    <a href="/profile/check-playlist/{{id}}">Check playlist</a> --}}
                     <a class="playlist-container no-decoration" href="/profile/check-playlist/{{id}}">
                         <p class="playlist-title">{{name}}</p>
                     </a>
